@@ -15,7 +15,7 @@ app.use('/getFootballData', createProxyMiddleware({
     target: 'https://api.football-data.org',
     changeOrigin: true,
     headers: {
-        'X-Auth-Token': 'your_api_key', // Replace with your actual API key
+        'X-Auth-Token': '5157b19281c649c0b30aa052e8b96fe1', // Replace with your actual API key
         'Content-Type': 'application/json',
     },
 }));
