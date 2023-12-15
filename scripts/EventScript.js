@@ -1,28 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
     var eventContainer = document.getElementById('eventContainer');
-    var apiKey = '5157b19281c649c0b30aa052e8b96fe1'; // Replace with your actual API key
-    var apiUrl = 'https://cors-anywhere.herokuapp.com/https://api.football-data.org/v4/competitions/CL/matches';
+    var apiUrl = 'http://localhost:3001/getFootballData';  // Update the URL to your local server
 
     fetch(apiUrl, {
-        method: 'GET',
         headers: {
-            'X-Auth-Token': apiKey,
+            'X-Auth-Token': '5157b19281c649c0b30aa052e8b96fe1', // Replace with your actual API key
             'Content-Type': 'application/json',
         },
     })
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(events) {
-        // Display each event in the container
-        events.matches.forEach(function(event) {
-            var eventDiv = createEventDiv(event);
-            eventContainer.appendChild(eventDiv);
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(events) {
+            // Display each event in the container
+            events.matches.forEach(function(event) {
+                var eventDiv = createEventDiv(event);
+                eventContainer.appendChild(eventDiv);
+            });
+        })
+        .catch(function(error) {
+            console.error('Error fetching events:', error);
         });
-    })
-    .catch(function(error) {
-        console.error('Error fetching events:', error);
-    });
 
     function createEventDiv(event) {
         var eventDiv = document.createElement('div');
