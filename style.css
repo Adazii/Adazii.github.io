@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Center vertically */
+}
+
+h1 {
+    margin: 0;
+    /* Remove default margin */
+}
+
+.login-button {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #555;
+}
+
+nav {
+    background-color: #333;
+    padding: 0.5em;
+    text-align: center;
+    //border-radius: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Move the last nav item to the right */
+nav a:last-child {
+    margin-left: auto;
+}
+
+.event {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 300px;
+    /* Adjust the width as needed */
+}
+
+.event h2 {
+    margin-top: 0;
+}
+
+.event p {
+    margin: 0;
+}
