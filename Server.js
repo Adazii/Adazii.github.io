@@ -9,7 +9,7 @@ app.use(cors()); // Enable CORS for all routes
 
 app.get('/getFootballData', async (req, res) => {
   try {
-    const apiUrl = 'https://api.football-data.org//v4/competitions/CL/matches'; // Replace with the actual API endpoint
+    const apiUrl = 'https://api.football-data.org/v4/competitions/CL/matches'; // Replace with the actual API endpoint
 
     const response = await fetch(apiUrl, {
       headers: {
