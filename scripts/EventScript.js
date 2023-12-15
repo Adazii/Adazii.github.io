@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Replace 'your-api-key' with your actual API key
     var apiKey = '5157b19281c649c0b30aa052e8b96fe1';
-    var apiUrl = 'http://localhost:3000/getFootballData';  // Update the URL to your server-side proxy endpoint
+    var apiUrl = 'https://api.football-data.org/v4/competitions/CL/matches';  // Update the URL to your server-side proxy endpoint
 
     fetch(apiUrl, {
         headers: {
