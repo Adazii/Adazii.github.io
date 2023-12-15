@@ -1,26 +1,21 @@
 const express = require('express');
-const fetch = require('node-fetch');
+const cors = require('cors');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(express.json());
+app.use(cors()); // Enable CORS for all routes
 
-// Serve your static files (if any) from the public directory
-app.use(express.static('public'));
-
-// Use the proxy middleware to forward requests to the Football Data API
 app.use('/getFootballData', createProxyMiddleware({
     target: 'https://api.football-data.org',
     changeOrigin: true,
     headers: {
-        'X-Auth-Token': '5157b19281c649c0b30aa052e8b96fe1', // Replace with your actual API key
+        'X-Auth-Token': '5157b19281c649c0b30aa052e8b96fe1', // Updated with your actual API key
         'Content-Type': 'application/json',
     },
 }));
 
-// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
