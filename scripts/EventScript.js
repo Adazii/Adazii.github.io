@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     var eventContainer = document.getElementById('eventContainer');
-    var apiUrl = 'http://localhost:3001/getFootballData';  // Update the URL to your local server
+    var apiUrl = 'http://localhost:3001/v4/competitions/CL/matches';  // Update the URL to your local server
 
     fetch(apiUrl, {
         headers: {
