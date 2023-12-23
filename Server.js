@@ -29,3 +29,4 @@ app.get('/getFootballData', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+// Server=localhost\MSSQLSERVER01;Database=master;Trusted_Connection=True;

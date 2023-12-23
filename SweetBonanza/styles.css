@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('sweet_bonanza_by_nontonvideo88_deu6pmm-fullview.jpg');
+  background-size: cover; /* This will cover the entire background */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center center; /* Center the image */
+  background-attachment: fixed; /* Fixed position */
+    margin: 0;
+    padding: 0;
+}
+
+.slot-machine {
+    margin-top: 50px;
+}
+
+.shake {
+    animation: shake 1s ease-in-out; /* Increase the duration to slow down the shake */
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 90% { transform: translateX(-5px); } /* Decrease the translation values to make it less aggressive */
+    20%, 80% { transform: translateX(5px); }
+    30%, 50%, 70% { transform: translateX(-3px); }
+    40%, 60% { transform: translateX(3px); }
+}
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.symbol.shake {
+    animation: shake 0.5s ease-in-out 0s 3;
+}
+
+.symbol.fadeOut {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+.reels {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px; /* Minimal gap between symbols */
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Lighter background */
+    padding: 10px; /* Padding for grid layout */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Subtle shadow for depth */
+}
+
+.symbol {
+    width: 120px; /* Increased size for each symbol */
+    height: 120px; /* Increased size for each symbol */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5em; /* Further adjusted font size for symbols */
+    animation: dropAnimation 0.5s ease-in-out; /* Apply the drop animation */
+}
+
+button {
+    padding: 15px 30px; /* Button padding */
+    font-size: 18px; /* Button font size */
+    cursor: pointer;body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #2c2c2c;
+        background-image: linear-gradient(to bottom, #2c2c2c, #000000);
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .highlighted {
+        background-color: yellow; /* or any other color you prefer */
+    }
+    
+    .slot-machine {
+        margin-top: 50px;
+        max-width: 800px; /* Set maximum width for the slot machine container */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .fade-out {
+        animation: fadeOut 0.5s ease;
+    }
+    
+    .move-down {
+        animation: moveDown 0.5s ease;
+    }
+    
+    .new-symbol {
+        animation: newSymbol 0.5s ease;
+    }
+    .shift-down {
+        animation: shiftDown 0.5s ease forwards;
+    }
+    
+    @keyframes shiftDown {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+    
+    @keyframes moveDown {
+        from { transform: translateY(-100%); }
+        to { transform: translateY(0); }
+    }
+    
+    @keyframes newSymbol {
+        from { transform: translateY(-100%); }
+        to { transform: translateY(0); }
+    }
+    .reels {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1px; /* Minimal gap between symbols */
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.1); /* Lighter background */
+        padding: 10px; /* Padding for grid layout */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Subtle shadow for depth */
+        overflow: hidden; /* Hide overflow to prevent stretching */
+    }
+    
+    @keyframes dropAnimation {
+        0% {
+          transform: translateY(-100px); /* Start position above the grid */
+          opacity: 0; /* Start with opacity 0 */
+        }
+        100% {
+          transform: translateY(0); /* End position aligned with the grid */
+          opacity: 1; /* Fully visible */
+        }
+      }
+    
+    
+    button {
+        padding: 15px 30px; /* Button padding */
+        font-size: 18px; /* Button font size */
+        cursor: pointer;
+        background-color: #4CAF50; /* Button background color */
+        color: white; /* Button text color */
+        border: none; /* No border for button */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s; /* Smooth transition */
+    }
+
+    .toggle {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    
+    .toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+    }
+    
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(26px);
+    }
+    
+    .toggle-container {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+
+
+
+
+
+    button:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+    
+    .results {
+        margin-top: 30px; /* Margin for results */
+    }
+    .winning-symbol {
+        background-color: rgba(255, 255, 255, 0.1); /* Subtle white background with low opacity */
+        transition: background-color 0.5s ease; /* Smooth transition for highlighting effect */
+    }
+    
+    .wallet {
+        margin-top: 20px; /* Margin for wallet */
+    }
+    
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border for button */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.results {
+    margin-top: 30px; /* Margin for results */
+}
+
+.wallet {
+    margin-top: 20px; /* Margin for wallet */
+}
+
+#freeSpinsBox {
+    position: absolute; /* Position absolute */
+    top: 20px; /* Adjust top position */
+    right: 20px; /* Adjust right position */
+    padding: 10px;
+    background-color: lightblue; /* Light blue background color */
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif; /* Change font to Arial */
+    font-size: 1.2em; /* Font size */
+    color: black; /* Black text color */
+  }
