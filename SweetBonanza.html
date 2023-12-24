@@ -11,38 +11,38 @@
 
 
       
-<div class="slot-machine">
-    <div class="reels" id="reelsGrid"></div>
-    
-    <button onclick="spin()">Spin</button>
-    <div id="multiplierDisplay">Multiplier: 1x</div>
-    
-    <div class="results">
-        <h2>Results</h2>
-        <p id="resultText"></p>
+    <div class="slot-machine">
+        <div class="reels" id="reelsGrid"></div>
+        
+        <button id="spin">Spin</button>
+        <div id="multiplierDisplay">Multiplier: 1x</div>
+        
+        <div class="results">
+            <h2>Results</h2>
+            <p id="resultText"></p>
+        </div>
+        
+        <div id="walletDisplay" style="border: 2px solid black; padding: 10px; margin: 20px; display: inline-block;">
+            <div>
+                <span id="walletAmount">100</span> <!-- Initial wallet amount -->
+            </div>
+            <div>
+                Bet: <span id="betAmount">2</span> <!-- Displayed bet amount -->
+                <button id="decreaseBet" style="font-size: 12px; padding: 5px;">-</button>
+                <button id="increaseBet" style="font-size: 12px; padding: 5px;">+</button>
+            </div>
+            <div class="toggle-container">
+                <label class="toggle">
+                    <input type="checkbox" id="specialOccurrenceToggle">
+                    <span class="slider"></span>
+                </label>
+                <span id="toggleText">Increase chance of scatter!</span>
+            </div>
+        </div>
+        <div id="freeSpinsBox" class="free-spins-box">
+            <span id="freeSpinsDisplay">Free Spins: 0</span>
+          </div>
     </div>
-    
-    <div id="walletDisplay" style="border: 2px solid black; padding: 10px; margin: 20px; display: inline-block;">
-        <div>
-            <span id="walletAmount">100</span> <!-- Initial wallet amount -->
-        </div>
-        <div>
-            Bet: <span id="betAmount">2</span> <!-- Displayed bet amount -->
-            <button id="decreaseBet" style="font-size: 12px; padding: 5px;">-</button>
-            <button id="increaseBet" style="font-size: 12px; padding: 5px;">+</button>
-        </div>
-        <div class="toggle-container">
-            <label class="toggle">
-                <input type="checkbox" id="specialOccurrenceToggle">
-                <span class="slider"></span>
-            </label>
-            <span id="toggleText">Increase chance of scatter!</span>
-        </div>
-    </div>
-    <div id="freeSpinsBox" class="free-spins-box">
-        <span id="freeSpinsDisplay">Free Spins: 0</span>
-      </div>
-</div>
 
 <script src="SweetBonanza/script.js"></script>
 
